@@ -18,5 +18,5 @@ from stellar-token-factory import TokenFactory
 issuer_secret = 'SBLVL4PBIGHTCPEAWEWNZ2BSW2OU4KEUYHARWSL2AICCVNKQ6FQSP2OF'
 owner_secret = 'SAAXGVL7A56BS2CP5OWLREAVTVSFB2NAMIPZWC5ETMDCZ54A6UNTVUCZ'
 tf = TokenFactory(issuer_secret)
-tx = tf.generate_non_fungible_token(owner_secret, 'FUNGI', metadata={'img':'testing.jpg'})
+tx = tf.generate_non_fungible_token(initial_owner_secret=owner_secret, code='FUNGI', metadata={'img':'testing.jpg'})
 ```
