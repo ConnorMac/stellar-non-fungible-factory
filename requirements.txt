@@ -1,0 +1,2 @@
+git+git://github.com/StellarCN/py-stellar-base@v0.2
+ipfsapi==0.4.3
