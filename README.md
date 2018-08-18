@@ -15,8 +15,8 @@ The machine running the script will also need an IPFS daemon running on localhos
 ```
 from stellar-token-factory import TokenFactory
 
-issuer_secret = 'SBLVL4PBIGHTCPEAWEWNZ2BSW2OU4KEUYHARWSL2AICCVNKQ6FQSP2OF'
-owner_secret = 'SAAXGVL7A56BS2CP5OWLREAVTVSFB2NAMIPZWC5ETMDCZ54A6UNTVUCZ'
+issuer_secret = '{SECRET_1}'
+owner_secret = '{SECRET_2}'
 tf = TokenFactory(issuer_secret, network='TESTNET') # Defaults to the TESTNET
 tx = tf.generate_non_fungible_token(initial_owner_secret=owner_secret, code='FUNGI', metadata={'img':'testing.jpg'})
 ```
