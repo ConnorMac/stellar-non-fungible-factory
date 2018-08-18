@@ -13,10 +13,15 @@ Before running the script you will need a funded Issuer account (1.5XLM) and a f
 The machine running the script will also need an IPFS daemon running on localhost.
 
 ```
-from stellar-token-factory import TokenFactory
+from stellar_token_factory import TokenFactory
 
 issuer_secret = 'SBLVL4PBIGHTCPEAWEWNZ2BSW2OU4KEUYHARWSL2AICCVNKQ6FQSP2OF'
 owner_secret = 'SAAXGVL7A56BS2CP5OWLREAVTVSFB2NAMIPZWC5ETMDCZ54A6UNTVUCZ'
 tf = TokenFactory(issuer_secret)
-tx = tf.generate_non_fungible_token(owner_secret, 'FUNGI', metadata={'img':'testing.jpg'})
+metadata = {
+    'img': 'testing.jpg',
+    'description': 'This is my first collectable!',
+    'ref_url': 'This is a url for more context'
+}
+tx = tf.generate_non_fungible_token(owner_secret, 'FUNGI', metadata=metadata)
 ```

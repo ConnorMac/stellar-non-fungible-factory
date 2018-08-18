@@ -28,7 +28,6 @@ class TokenFactory(object):
 
     def create_ipfs_hash(self, data):
         # TODO: Don't generate an actual file
-
         with io.open(
             'token' + str(int(time.time())) + '.json', 'w', encoding='utf-8'
         ) as f:
